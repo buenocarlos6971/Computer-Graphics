@@ -1,10 +1,3 @@
-Code Reuse:
-Used Code from Hw6  to make an overall outline for my code and get textures working
-Also reused code from Hw6 for makefile and other files needed.
-Reused code fom Hw3, Hw4,Hw5, and Hw6 as well.
-https://stackoverflow.com/questions/28547173/creating-a-3d-room-in-opengl-c for wall idea
-(https://stackoverflow.com/questions/32883572/how-to-draw-cylinder-in-modern-opengl) used for help with making cylinder just modified to get normal and things correct
-
 How to run:
 Run the make file and then the exe
 
