@@ -1,0 +1,43 @@
+<!--Home Page-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="vis.js" type="text/javascript"></script>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="jumbotron text-center" style="margin-bottom:0;">
+      <h1>Project Avoke</h1>
+    </div>
+    waiting to put nav bar here
+    <br>
+    holder search bar
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+        </div>
+        <div class="col-sm">
+          <div class="canvas-wrapper">
+            <div class="dragndrop-wrapper">
+              <input class="buttons" id="audio-file" type="file" accept="audio/*" name="Upload"> <br><br>
+            </div>
+            <canvas id="main-canvas" width="600" height="512"></canvas>
+          </div>
+          <button class="buttons" id="start-button" onclick="Visualize()">Visualize!</button>
+        </div>
+        <div class="col-sm">
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer>
+  </footer>
+</html>

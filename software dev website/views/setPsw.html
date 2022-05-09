@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Avoke</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="frontend.html"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Log in</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Log out</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">View account</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Switch account</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Setting
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="setName.html">Change Name</a>
+              <a class="dropdown-item" href="setPsw.html">Change Password</a>
+              <a class="dropdown-item" href="setPic.html">Change Picture</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Others
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Invite your friends</a>
+              <a class="dropdown-item" href="#">Membership</a>
+              <a
+                class="dropdown-item"
+                href="https://github.com/CSCI-3308-CU-Boulder/101-4-MyTeam.IsBetterThanYours-true/tree/master"
+                >Github</a
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <form action="#">
+        <br /><br /><br /><br /><br /><br />
+        <div class="form-group">
+          <div class="col-sm-3">
+            <input
+              id="psw"
+              type="password"
+              class="form-control"
+              name="password"
+              placeholder="Password"
+              required="required"
+            />
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-3">
+            <input
+              id="cpsw"
+              type="password"
+              class="form-control"
+              name="confirm password"
+              placeholder="Confirm Password"
+              required="required"
+            />
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-2">
+            <button
+              id="my_submit_button"
+              class="btn btn-light btn-block login-btn"
+              disabled
+              onClick="onClickFunction()"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+        <div>
+          <div id="message" style="display: block">
+            <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+            <p id="capital" class="invalid">
+              A <b>capital (uppercase)</b> letter
+            </p>
+            <p id="number" class="invalid">A <b>number</b></p>
+            <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+            <p id="match" class="invalid">
+              Password and Confirm Password Match
+            </p>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script>
+      window.onload = function openModal() {
+        var myInput = document.getElementById("psw");
+        var confirmMyInput = document.getElementById("cpsw");
+        var letter = document.getElementById("letter");
+        var capital = document.getElementById("capital");
+        var number = document.getElementById("number");
+        var length = document.getElementById("length");
+        var match = document.getElementById("match");
+
+        // When the user starts to type something inside the password field
+        myInput.onkeyup = function () {
+          console.log(letter.classList.contains("invalid"));
+          var lowerCaseLetters = /[a-z]/g; // : Fill in the regular experssion for lowerCaseLetters
+          var upperCaseLetters = /[A-Z]/g; // : Fill in the regular experssion for upperCaseLetters
+          var numbers = /[0-9]/g; // : Fill in the regular experssion for digits
+          var minLength = 8; // : Change the minimum length to what what it needs to be in the question
+          if (myInput.value.match(lowerCaseLetters)) {
+            letter.classList.remove("invalid");
+            letter.classList.add("valid");
+          } else {
+            letter.classList.remove("valid");
+            letter.classList.add("invalid");
+          }
+
+          // Validate capital letters
+          if (myInput.value.match(upperCaseLetters)) {
+            capital.classList.remove("invalid");
+            capital.classList.add("valid");
+          } else {
+            capital.classList.remove("valid");
+            capital.classList.add("invalid");
+          }
+
+          // Validate numbers
+          if (myInput.value.match(numbers)) {
+            number.classList.remove("invalid");
+            number.classList.add("valid");
+          } else {
+            number.classList.remove("valid");
+            number.classList.add("invalid");
+          }
+
+          // Validate length
+          if (myInput.value.length >= minLength) {
+            length.classList.remove("invalid");
+            length.classList.add("valid");
+          } else {
+            length.classList.remove("valid");
+            length.classList.add("invalid");
+          }
+        };
+
+        confirmMyInput.onkeyup = function () {
+          // Validate password and confirmPassword
+          var passEqualsConfPass = false;
+          var pas = myInput.value;
+          var cpas = confirmMyInput.value;
+          if (pas == cpas && pas!='') {
+            passEqualsConfPass = true;
+          } else {
+            passEqualsConfPass = false;
+          }
+          if (passEqualsConfPass) {
+            match.classList.remove("invalid");
+            match.classList.add("valid");
+          } else {
+            match.classList.remove("valid");
+            match.classList.add("invalid");
+          }
+
+          // Disable or Enable the button based on the elements in classList
+          enableButton(letter, capital, number, length, match);
+        };
+      };
+
+      function enableButton(letter, capital, number, length, match) {
+        var button = document.getElementById("my_submit_button");
+        var condition = false;
+        if (
+          letter.classList.contains("valid") &&
+          capital.classList.contains("valid") &&
+          number.classList.contains("valid") &&
+          length.classList.contains("valid") &&
+          match.classList.contains("valid")
+        ) {
+          condition = true;
+        }
+        if (condition) {
+          button.disabled = false;
+        }
+      }
+
+      function onClickFunction() {
+        alert("Changed your password successfully!");
+      }
+    </script>
+  </body>
+</html>

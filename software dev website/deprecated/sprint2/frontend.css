@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+}
+
+/* Style the top navigation bar */
+
+.navbar {
+    /* overflow: hidden; */
+    background-color: #2f4f4f;
+}
+
+/* Style the navigation bar links */
+
+.navbar a {
+    float: left;
+    /* display: block; */
+    /* color: white; */
+    text-align: center;
+    padding: 13px 20px;
+    text-decoration: none;
+}
+
+/* Right-aligned link */
+
+.navbar a.right {
+    float: right;
+}
+
+/* Change color on hover */
+
+.navbar a:hover {
+    background-color: #f5fffa;
+    color: black;
+}
+
+/* Footer */
+
+.footer {
+    width: 100%;
+    float: left;
+    padding: 20px;
+    text-align: center;
+    background: #20b2aa;
+    position: absolute;
+    bottom: 0;
+}
+
+/* Footer left section*/
+
+.footerleft {
+    width: 50%;
+    float: left;
+}
+
+/* Footer right section*/
+
+.footerright {
+    width: 50%;
+    float: right;
+    text-align: right;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    font-size: 14px;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+label {
+    font-size: 15px;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    background-color: #f0ffff;
+    outline: none;
+}
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+/* main container which conatin login form */
+
+.formContainer {
+    width: 40%;
+    padding-left: 10%;
+    height: 100%;
+    float: left;
+}
+
+.formContainer button {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgb(10, 119, 13);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    opacity: 0.9;
+}
+
+.formContainer button:hover {
+    opacity: 1;
+}
+
+.cancel {
+    padding: 14px 20px;
+    background-color: #ff3d2f;
+}
+
+/* row container */
+
+td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.row {
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+
+.formContainer p {
+    font-size: 20px;
+}
+
+/* second container which membership subscription links */
+
+/* .container2 {
+    width: 35%;
+    float: right;
+    height: 100%;
+    padding-top: 100px;
+  } */
+
+.container2 label {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.container2 button {
+    font-size: 12px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    padding: 6px 12px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    opacity: 0.9;
+}
