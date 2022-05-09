@@ -22,10 +22,3 @@ m: turn off and on light movement
 ]: increase ball elevation
 0: resets viewing angle
 p: prespective/orthogonal switch
-
-What remains: 
-I need to get my first person mode working correctly as when I tried to implement it the mode was not working how I wanted it.
-I also need to find some different textures to make the room look better for example I want to make or find a texture with pictures to make the walls look less bare.
-I also may create objects to put on the table such as food to accompy the pepsi's.
-I would also like to add a feature where the user can flip through multiple channels on the tv to add an interactive element. 
-If time allows I may want to allow change the textures of everything in the room to see what the room would look like with different color pallets.
