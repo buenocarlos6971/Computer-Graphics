@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flickr</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<nav class="navbar navbar-expand-sm bg-dark">
+  <style>
+      a{
+          color:white
+      }
+  </style>
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="..\My_bootstrap\mypage_bootstrap.html">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="..\My_bootstrap\projects.html">Projects</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="..\My_bootstrap\form.html">Form</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="..\signup-modal\login.html">Sign up Modal</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="..\tic-tac-toe\tic-tac-toe.html">Tic-Tac-Toe</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="index.html">Flickr</a>
+    </li>
+    <div style="position: absolute; right:55px">
+      <li class="nav-item">
+          <a class="nav-link" href="https://github.com/carlosb28/Labs_3308"> <img src= "https://www.iconfinder.com/data/icons/black-white-social-media/64/social_media_logo_github-512.png" width=30 height=30></a>
+      </li>
+    </div>
+  </ul>
+</nav>
+</head>
+<body>
+  <script type="text/javascript" src="script.js"></script>
+  <div class="row bg-dark mb-3 center">
+    <div class="col-sm"></div>
+    <div class="col-sm">
+      <div class="form-group">
+        <div class="col-sm-20">
+          <select class="form-control" id="num_image">
+            <option>30</option>
+            <option>50</option>
+            <option>70</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="keyword" class="form-control" id="s_search" placeholder="Search">
+      </div>
+      <button class="button" onclick="makeApiCall()">Submit</button>
+    </div>
+    <div class="col-sm"></div>
+  </div>
+  <div class="container">
+    <div class ="row" id="images">
+    </div>
+  </div>
+</body>
+</html>

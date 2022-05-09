@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+    <html>
+      <head>
+        <title>Form</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      </head>
+      <body>
+        <nav class="navbar navbar-expand-sm bg-dark">
+          <style>
+              a{
+                  color:white
+              }
+          </style>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="mypage_bootstrap.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="projects.html">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="form.html">Form</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="..\signup-modal\login.html">Sign up Modal</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="..\tic-tac-toe\tic-tac-toe.html">Tic-Tac-Toe</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="..\flickr\index.html">Flickr</a>
+            </li>
+            <div style="position: absolute; right:55px">
+              <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/carlosb28/Labs_3308"> <img src= "https://www.iconfinder.com/data/icons/black-white-social-media/64/social_media_logo_github-512.png" width=30 height=30></a>
+              </li>
+            </div>
+          </ul>
+        
+      </nav>
+        <h1>Add New Interest</h1>
+        <form action="mypage_bootstrap.html">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Interest Name</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Name">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Texts about your interest</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+              <div class="row">
+                <div class="col">
+                    <label for="exampleFormControlFile1">Upload Local File</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                </div>
+                <div class="col">
+                    <label for="exampleFormControlFile1">Select # of Tweets to Display</label>
+                    <select class="form-control">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                      </select>
+                </div>
+              </div>
+              <label for="exampleFormControlFile1">On a scale from 1-5 how interested in this are you</label>
+              <br>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <label class="form-check-label" for="inlineRadio1">1</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                <label class="form-check-label" for="inlineRadio2">2</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                <label class="form-check-label" for="inlineRadio3">3</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+                <label class="form-check-label" for="inlineRadio4">4</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+                <label class="form-check-label" for="inlineRadio5">5</label>
+              </div>
+              <div class="row">
+                <div class="col">
+                    <label for="exampleInputEmail1">Username</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
+                </div>
+                <br>
+                <div class="col">
+                    <label for="exampleInputEmail1"> </label>
+                    <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                </div>
+              </div>
+              <br>
+              <button type="submit" class="btn btn-primary">Submit</button>
+          
+      </body>
+    </html>

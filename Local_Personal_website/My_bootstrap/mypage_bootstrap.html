@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function addCard(tag){
+        var tweet1 = $('<div class="card bg-dark text-white" id = "nc1"> .... more card info goes here... <button onclick="document.getElementById(\'nc1\').remove()" class="btn btn-info">remove</button> </div>');
+        var tweet2 = $('<div class="card bg-dark text-white" id = "nc2"> .... more card info goes here... <button onclick="document.getElementById(\'nc2\').remove()" class="btn btn-info">remove</button> </div>');
+        var tweet3 = $('<div class="card bg-dark text-white" id = "nc3"> .... more card info goes here... <button onclick="document.getElementById(\'nc3\').remove()" class="btn btn-info" >remove</button> </div>');
+        if(tag == "#interest1"){
+          tweet1.appendTo(tag)
+        }
+        else if (tag == "#interest2") {
+          tweet2.appendTo(tag)
+        }
+        else if (tag == "#interest3"){
+          tweet3.appendTo(tag)
+        }
+      }
+      </script>
+    <title>About me</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+  <body> 
+    <nav class="navbar navbar-expand-sm bg-dark">
+        <style>
+            a{
+                color:white
+            }
+        </style>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="mypage_bootstrap.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="projects.html">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="form.html">Form</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="..\signup-modal\login.html">Sign up Modal</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="..\tic-tac-toe\tic-tac-toe.html">Tic-Tac-Toe</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="..\flickr\index.html">Flickr</a>
+          </li>
+          <div style="position: absolute; right:55px">
+            <li class="nav-item">
+                <a class="nav-link" href="https://github.com/carlosb28/Labs_3308"> <img src= "https://www.iconfinder.com/data/icons/black-white-social-media/64/social_media_logo_github-512.png" width=30 height=30></a>
+            </li>
+          </div>
+        </ul>
+      
+    </nav>
+    <div class="container">
+        <h1>Bueno, Carlos- 
+            <small class="text-muted"> Software Development Methods and Tools</small>
+        </h1>
+    </div>
+    <div class="container p-3 mb-2 bg-dark text-white">
+        <div class="card  p-3 mb-2 bg-dark text-white">
+            <div class="card-body">Three interesting facts about me is I am from Denver, I have a cat named Yuumi, and I am in the Army. I am studying computer science due to a love of computers from an early age.</div>
+        </div>
+        <br>
+        <p><img src="https://scontent-den4-1.xx.fbcdn.net/v/t1.0-9/19275137_1145274192285173_2206647128601497262_n.jpg?_nc_cat=105&_nc_sid=09cbfe&_nc_ohc=345bCpj56FcAX_D_UeR&_nc_ht=scontent-den4-1.xx&oh=1d2c4cbbd0001fe59bb7cc6ac0af7699&oe=5FA6FA93"  class="rounded-circle alt="picof Carlos Bueno XD" width="500" height="500"></p>
+          <h3>My interest</h3>
+          <p style="text-align: right;"><a href="#" class="btn btn-info" role="button">interest</a></p>
+          <div class="card-group">
+            <div class="card p-3 mb-2 bg-dark text-white">
+                <button onclick="addCard('#interest1')" class="btn btn-info">add</button>
+                <img class="card-img-top" src="https://miro.medium.com/max/3118/1*iwPLQjyFYRTVeQ2cb4S9rA.png" alt="Card Coding">
+                <div class="card-body" id="interest1" style="display: table-cell">
+                    <h5 class="card-title">Coding</h5>
+                    <p class="card-text">I like coding because creating things is fun!</p>
+                </div>
+                </div>
+                <div class="card p-3 mb-2 bg-dark text-white">
+                  <button onclick="addCard('#interest2')" class="btn btn-info">add</button>
+                  <img class="card-img-top" src="https://res.cloudinary.com/soundbetter/image/upload/c_fill,f_auto,g_face:auto,h_533,q_90,w_763/v1504777621/assets/photos/2300/STUDIO_PIC.jpg" alt="Card music production">
+                  <div class="card-body" id="interest2" style="display: table-cell">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                </div>
+                </div>
+                <div class="card p-3 mb-2 bg-dark text-white">
+                  <button onclick="addCard('#interest3')" class="btn btn-info">add</button>
+                  <img class="card-img-top" src="https://biohackinfo.com/wp-content/uploads/2018/09/powerlifting-biohacking-weight-training-strength-weightlifting-lifting-bodybuilding-muscle-crispr-super.jpg" alt="Card powerlifting">
+                  <div class="card-body" id="interest3" style="display: table-cell">
+                    <h5 class="card-title">Power lifting</h5>
+                    <p class="card-text">I like powerlifting because I like to improve myself!</p>
+                </div>
+                </div>
+          </div>
+    </div>
+  </body>
+  <footer>
+    <div class="container p-3 mb-2 bg-dark text-white " style="text-align:center">
+        <a href="https://www.linkedin.com/feed/"><img src="https://www.freepnglogos.com/uploads/linkedin-symbol-logo-22.png" width=30 height=30></a>
+    </div>
+  </footer>
+</html>
